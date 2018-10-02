@@ -8,59 +8,92 @@ function initMap() {
   var marker = new google.maps.Marker({position: sandiego, map: map});
 }
 
-$(".open").on("click", function(e){
-  $(".modal-overlay, .modal, .modal-content").addClass("active");
-})
-
-$(".close").on("click", function() {
-  $(".modal-content, .modal, .modal-overlay").removeClass("active");
-})
-
-
-var arcGen = d3.arc();
-var data = arcGen({
-  startAngle: 1.5 * Math.PI,
-  endAngle: 0.5 * Math.PI,
-  innerRadius: 0,
-  outerRadius: 400
-});
-
- d3.select("g").append("path").attr("width", 900).attr("height", 500).attr("fill", "teal").attr('d', data);
-
- const container = document.createElement('div');
-
- const section = document.getElementById('semicircle');
-
- section.appendChild(container);
-
-var request = new XMLHttpRequest();
-request.open('GET', 'https://api.punkapi.com/v2/beers/', true);
-request.onload = function () {
-  var data = JSON.parse(this.response);
-
-  if (request.status >= 200 && request.status < 400) {
-    data.forEach(beer => {
-      console.log(beer.name);
-      const card = document.createElement('div');
-      card.setAttribute('class', 'card');
-
-      const h1 = document.createElement('h1');
-      h1.textContent = beer.name;
-
-      const p = document.createElement('p');
-      p.textContent = beer.tagline;
-
-      container.appendChild(card);
-      card.appendChild(h1);
-      card.appendChild(p);
-
-    })
-  } else {
-    console.log("error");
-  }
+function openModal(e) {
+  const overlay = (e.target.children[0]);
+  $(overlay).addClass("active");
 };
 
-request.send();
+const opens = document.querySelectorAll('.open');
+opens.forEach(open => open.addEventListener('click', openModal));
+
+function closeModal(e) {
+  const overlay = this.parentNode.parentNode.parentNode;
+  $(overlay).removeClass("active");
+}
+
+const closes = document.querySelectorAll('.close');
+closes.forEach(close => close.addEventListener('click', closeModal));
+
+
+if (e.target == overlay) {
+  $(overlay).removeClass("active");
+
+}
+
+
+// $(".open").on("click", function(e){
+//   const overlay = open.children;
+//   overlay.forEach (modal => )
+//   $(overlay).addClass("active");
+//   $(modal).addClass("active");
+//
+// })
+//
+// $(".close").on("click", function() {
+//   $(".modal-content, .modal, .modal-overlay").removeClass("active");
+// })
+
+
+
+// var arcGen = d3.arc();
+// var data = arcGen({
+//   startAngle: 1.5 * Math.PI,
+//   endAngle: 0.5 * Math.PI,
+//   innerRadius: 0,
+//   outerRadius: 400
+// });
+//
+//  d3.select("g").append("path").attr("width", 900).attr("height", 500).attr("fill", "teal").attr('d', data);
+//
+//  const container = document.createElement('div');
+//
+//  const section = document.getElementById('semicircle');
+//  section.setAttribute('class', 'grid');
+
+
+ // section.appendChild(container);
+
+// var request = new XMLHttpRequest();
+// request.open('GET', 'https://api.punkapi.com/v2/beers/', true);
+// request.onload = function () {
+//   var data = JSON.parse(this.response);
+//
+//   if (request.status >= 200 && request.status < 400) {
+//     data.forEach(beer => {
+//       console.log(beer.name);
+//       const card = document.createElement('div');
+//       card.setAttribute('class', 'card');
+//
+//       const h1 = document.createElement('h1');
+//       h1.textContent = beer.name;
+//
+//       const p = document.createElement('p');
+//       p.textContent = beer.tagline;
+//
+//       container.appendChild(card);
+//       card.appendChild(h1);
+//       card.appendChild(p);
+//
+//     })
+//   } else {
+//     console.log("error");
+//   }
+// };
+//
+// request.send();
+
+// 0ed018f757f42bab4a5cf95e946dd71e
+
 
 //
 // var modal = (function(){

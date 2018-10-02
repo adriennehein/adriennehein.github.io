@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Adrienne Hein</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href='css/devicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="index.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <div class="">
+
+        <div class="navigation">
+
+          <div class="nav-bar">
+
+          <input type="checkbox" id="toggle-menu"/>
+          <label for="toggle-menu" id="hamburger"><span></span></label>
+
+          <ul class="menu">
+            <a href="#about"><li>About</li></a>
+            <a href="#skills"><li>Skills</li></a>
+            <a href="#portfolio"><li>Portfolio</li></a>
+          </ul>
+
+          <ul class="contact-media">
+            <a href="https://www.linkedin.com/in/heina/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="HeinAdrienneCV-dl.pdf" target="_blank"><i class="far fa-file"></i></a>
+            <a href="https://github.com/adriennehein" target="_blank"><i class="fab fa-github"></i></a>
+          </ul>
+        </div>
+
+        </div> <!-- /.navigation -->
+
+      </div> <!-- /.node -->
+      <div  class="photo" style="background: url('portrait-edited-tint.jpg') top center fixed; background-size: cover;">
+
+
+      <div class="node">
+
+        <div class="hero container">
+
+          <div class="hero-title">
+            Adrienne Hein
+          </div>
+
+          <div class="under-bar">
+
+          </div>
+
+          <div class="subtext">
+            Full-Stack Web Developer
+          </div>
+
+        </div> <!-- /.hero -->
+
+
+        </div>
+
+        <div class="overlay">
+      </div> <!-- /.node -->
+
+      </div>
+
+      <div class="node container">
+
+        <div class="about" >
+
+          <p>I'm a full-stack web developer with a passion for design and good UX/UI. My immediate goals are to learn as much as possible.</p>
+          <p>I have extensive client-facing experience, and am currently a self-employed contractor working on a variety of jobs, including template building, digital marketing, and building a library of reusable site components.</p>
+          <p>I graduated college in 2011 with a B.A. Summa cum Laude. My personal interests include foreign languages, everything film, and being a mentor.</p>
+
+        </div> <!-- /.about -->
+
+      </div> <!-- /.node -->
+
+      <div class="break"></div>
+
+      <div class="node container" id="skills">
+
+        <div class="skills">
+
+          <div class="title">Skills & Tools</div>
+
+          <ul class="tabs">
+            <li class="tab" onClick="openTab(event, 'languages')">Languages</li>
+            <li class="tab" onClick="openTab(event, 'tools')">Tools & Libraries</li>
+            <li class="tab" onClick="openTab(event, 'frameworks')">Frameworks</li>
+            <li class="tab" onClick="openTab(event, 'software')">Software</li>
+          </ul>
+
+          <div id="languages" class="skillset tabgroup">
+            <div class="skill"><i class="devicons devicons-css3_full"></i> <div class="skill-name">css3</div><div class="tooltip hidden"></div></div>
+
+            <div class="skill"><i class="devicons devicons-html5"></i><div class="skill-name">html5</div><div class="tooltip hidden"></div></div>
+
+            <div class="skill"><i class="fab fa-js-square"></i><div class="skill-name">javascript</div><div class="tooltip hidden"></div></div>
+
+            <div class="skill"><i class="devicons devicons-php"></i><div class="skill-name">php</div><div class="tooltip hidden">used with wordpress backend and dwoo templating</div></div>
+
+            <div class="skill"><i class="devicons devicons-ruby_rough"></i><div class="skill-name">ruby</div><div class="tooltip hidden">experience testing and writing in ruby</div></div>
+
+            <div class="skill"><i class="devicons devicons-sass"></i><div class="skill-name">SCSS</div><div class="tooltip hidden">extensive SCSS experience</div></div>
+
+            <div class="skill"><i class="devicons devicons-database"></i><div class="skill-name">SQL</div><div class="tooltip hidden">Description</div></div>
+
+          </div>
+
+          <div id="tools" class="skillset tabgroup">
+            <div class="skill"><i class="fas fa-pen-nib"></i><div class="skill-name">copywriting</div><div class="tooltip hidden">short and long articles for digitial marketing strategies</div></div>
+
+            <div class="skill"><i class="devicons devicons-docker"></i><div class="skill-name">docker</div><div class="tooltip hidden">worked on two projects with docker containers</div></div>
+
+            <div class="skill"><i class="devicons devicons-git_branch"></i><div class="skill-name">Git</div><div class="tooltip hidden">github, bitbucket, gitlab</div></div>
+
+            <div class="skill"><i class="fab fa-gulp"></i><div class="skill-name">gulp</div><div class="tooltip hidden">set up and used regularly</div></div>
+
+            <div class="skill"><i class="devicons devicons-jquery"></i><div class="skill-name">jquery</div><div class="tooltip hidden">Description</div></div>
+
+            <div class="skill"><i class="devicons devicons-react"></i><div class="skill-name">react</div><div class="tooltip hidden">Description</div></div>
+
+            <div class="skill"><i class="fab fa-wordpress-simple"></i><div class="skill-name">wordpress</div><div class="tooltip hidden">experience building wordpress templates, integrating external plugins, using ACF</div></div>
+
+          </div>
+
+          <div id="frameworks" class="skillset tabgroup">
+            <div class="skill"><i class="devicons devicons-bootstrap"></i><div class="skill-name">bootstrap</div><div class="tooltip hidden"></div></div>
+
+            <div class="skill"><i class="devicons devicons-responsive"></i><div class="skill-name">foundation</div><div class="tooltip hidden"></div></div>
+
+            <div class="skill"><i class="devicons devicons-ruby_on_rails"></i><div class="skill-name">rails</div><div class="tooltip hidden"></div></div>
+
+            <div class="skill"><i class="fas fa-vial"></i><div class="skill-name">rspec</div><div class="tooltip hidden"></div></div>
+
+          </div>
+
+          <div id="software" class="skillset tabgroup">
+            <div class="skill"><i class="devicons devicons-atom"></i><div class="skill-name">atom</div><div class="tooltip hidden"></div></div>
+
+            <div class="skill"><i class="fab fa-google"></i><div class="skill-name">google suite</div><div class="tooltip hidden"></div></div>
+
+            <div class="skill"><i class="devicons devicons-windows"></i><div class="skill-name">microsoft suite</div><div class="tooltip hidden"></div></div>
+
+            <div class="skill"><i class="devicons devicons-photoshop"></i><div class="skill-name">photoshop</div><div class="tooltip hidden">vectors, minor photo editing, designing site components</div></div>
+
+          </div>
+
+        </div> <!-- /.skills -->
+
+      </div> <!-- /.node -->
+
+      <div class="break"></div>
+
+      <div class="title">Previous Projects
+
+      </div>
+
+        <div class="portfolio" id="portfolio">
+
+          <div class="panels">
+
+            <div class="panel panel1">
+              <p><a href="https://github.com/MANATonous">Code</a> <a href="https://media-literacy.herokuapp.com/">Visit</a></p>
+              <p>Media Literacy</p>
+              <p>Winner Most Innovative Hack<br> Women Who Code SD Hackathon 2018<br>Ruby/Rails app highlighting the deterioration of information--Digital telephone</p>
+            </div>
+            <div class="panel panel3">
+              <p><a href="trip-share-2.png">Code</a> | <a href="https://tripandshare.herokuapp.com/">Visit</a></p>
+              <p>Trip & Share</p>
+              <p>Ruby/Rails API on React. An app for sharing trip ideas and itineraries with friends and family.</p>
+            </div>
+            <div class="panel panel2">
+              <p><a href="https://images.pexels.com/photos/716834/pexels-photo-716834.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">Code</a> | <a href="">Visit</a></p>
+              <p>NASA API</p>
+              <a href=""><p>Visit</p></a>
+            </div>
+            <!-- <div class="panel panel4">
+              <p><a href="">Code</a> <a href="">Visit</a></p>
+              <p>OLK9</p>
+              <a href=""><p>Visit</p></a>
+            </div>
+            <div class="panel panel5">
+              <p><a href="">Code</a> <a href="">Visit</a></p>
+              <p>3 Blind Mice</p>
+              <a href=""><p>Visit</p></a>
+            </div> -->
+
+          </div>
+
+        </div> <!-- /.portfolio -->
+
+
+      <div class="node">
+
+        <div class="footer">
+
+        </div> <!-- /.footer -->
+
+      </div> <!-- /.node -->
+
+    </div> <!-- /.wrapper -->
+
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>
