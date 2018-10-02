@@ -74,9 +74,6 @@ a {
 
 }
 
-@keyframes slide {
-  100% {right: 15px;}
-}
 
 #toggle-menu:checked ~ #hamburger span::before {
   transform: rotate(45deg);
@@ -142,10 +139,6 @@ ul.menu {
   position: absolute;
   left: 0;
   z-index: 4;
-  transition: all 500ms ease-in-out;
-  -webkit-animation: slide 0.5s forwards;
-  -webkit-animation-delay: 2s;
-  animation: slide 0.5s forwards;
 }
 
 .menu li {
@@ -225,7 +218,8 @@ ul.contact-media {
   position: relative;
   top: 450px;
   color: white; */
-  font-size: .65em;
+  font-size: .5em;
+
 }
 
 
@@ -306,13 +300,6 @@ div.skill-name {
 }
 
 
-/* .skill-name:hover + .tooltip {
-  display: block;
-  background: white;
-  font-size: .5em;
-} */
-
-
 
 /* ========== PORTFOLIO ========== */
 
@@ -324,6 +311,7 @@ div.skill-name {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   padding: .75em 0;
+  margin-bottom: 2em;
 }
 
 .panels {
@@ -397,7 +385,6 @@ font-size: 1rem; background-color: rgba(0, 0, 0, .6);}
 /* =========FOOTER========= */
 
 .footer {
-  /* display: flex; */
   width: 100%;
   text-align: center;
 }
@@ -405,10 +392,6 @@ font-size: 1rem; background-color: rgba(0, 0, 0, .6);}
 .footer-things {
   justify-content: space-around;
   display: flex;
-}
-
-.contact-items {
-  /* display: flex; */
 }
 
 .contact-item {
@@ -495,16 +478,24 @@ font-size: 1rem; background-color: rgba(0, 0, 0, .6);}
 
   #toggle-menu:checked ~ ul.menu {
     display: block;
-  }
+   }
+
+
 
   ul.menu{
     background: rgba(255, 255, 255, 0.5);
     color: #406E8E;
-    position: relative;
+    position: absolute;
     top: 81px;
+    left: -100vw;
     height: auto;
     width: 100%;
     padding: 1em;
+
+    transition: all 500ms ease-in-out;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
   }
 
   ul.menu li {
@@ -528,6 +519,13 @@ font-size: 1rem; background-color: rgba(0, 0, 0, .6);}
     padding-right: 0;
   }
 
+  @-webkit-keyframes slide {
+      100% { left: 0; }
+  }
+
+  @keyframes slide {
+      100% { left: 0; }
+  }
 
   /* -------------------- */
 
