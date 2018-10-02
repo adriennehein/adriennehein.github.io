@@ -19,13 +19,27 @@ panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 
 
 // Skill tabs
+
 window.onload = function() {
     tabContent = document.querySelectorAll('.tabgroup');
     tabLinks = document.querySelectorAll('.tab');
 
     tabContent[0].style.display = "flex";
     tabLinks[0].className = "tab active";
+
+
+
 };
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 32.7157, lng: -117.1611},
+    zoom: 13,
+    disableDefaultUI: true,
+    draggable: false
+});
+}
 
 function openTab(e, tab) {
   var i, tabContent, tabLinks;
