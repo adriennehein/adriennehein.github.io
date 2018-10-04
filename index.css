@@ -248,6 +248,12 @@ ul.contact-media {
   width: 56px;
 }
 
+i.fix {
+  /* padding: 25px 28px 25px 23px; */
+  font-size: 1.5em;
+  padding: 30px 25px;
+}
+
 .skillset i:hover {
   background: #406E8E;
   color: white;
@@ -538,6 +544,11 @@ font-size: 1rem; background-color: rgba(0, 0, 0, .6);}
     padding: 15px;
     width: 40px;
     margin: 10px;
+  }
+
+  i.fix {
+    font-size: 1.3em;
+    padding: 18px 16px;
   }
 
   .skillset .skill-name {
