@@ -13,24 +13,35 @@ function toggleActive(e) {
 }
 
 panels.forEach(panel => panel.addEventListener('click', toggleOpen));
-
-
 panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 
 
 // Skill tabs
 
-window.onload = function() {
-    tabContent = document.querySelectorAll('.tabgroup');
-    tabLinks = document.querySelectorAll('.tab');
+let tabContent = document.querySelectorAll('.tabgroup');
+let tabLinks = document.querySelectorAll('.tab');
 
+// Set first tab as active
+window.onload = function() {
     tabContent[0].style.display = "flex";
     tabLinks[0].className = "tab active";
-
-
-
 };
 
+function openTab(e, tab) {
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+
+  for (i=0; i<tabLinks.length; i++) {
+    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(tab).style.display = "flex";
+  e.currentTarget.className += " active";
+}
+
+
+// Google map API
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -39,23 +50,4 @@ function initMap() {
     disableDefaultUI: true,
     draggable: false
 });
-}
-
-function openTab(e, tab) {
-  var i, tabContent, tabLinks;
-
-  tabContent = document.querySelectorAll('.tabgroup');
-  for (i = 0; i < tabContent.length; i++) {
-    tabContent[i].style.display = "none";
-
-  }
-
-  tabLinks = document.querySelectorAll('.tab');
-  for (i=0; i<tabLinks.length; i++) {
-    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
-  }
-
-  document.getElementById(tab).style.display = "flex";
-  e.currentTarget.className += " active";
-
 }
