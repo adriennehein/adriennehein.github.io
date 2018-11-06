@@ -268,6 +268,7 @@ i.fix {
   background: #406E8E;
   color: white;
   border-color: white;
+  
 }
 
 div.skill-name {
@@ -292,6 +293,7 @@ div.skill-name {
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: linear;
+  cursor: pointer;
 }
 
 .tab:hover {
@@ -353,6 +355,7 @@ div.skill-name {
     background 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11);
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 
 .panel.open {
