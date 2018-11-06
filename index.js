@@ -51,3 +51,17 @@ function initMap() {
     draggable: false
 });
 }
+
+const nav = document.querySelector('.navigation');
+const topNav = nav.offsetTop;
+const aboutNode = document.querySelector('#about');
+
+function fixNav() {
+  if (window.scrollY >= aboutNode.offsetTop) {
+    nav.classList.add("opaque-nav");
+  } else {
+    nav.classList.remove("opaque-nav");
+  }
+};
+
+window.addEventListener('scroll', fixNav);

@@ -68,6 +68,8 @@ a {
 
 /* =========NAVIGATION========= */
 
+
+
 #toggle-menu {
   display: none;
 }
@@ -102,6 +104,11 @@ a {
 .nav-bar {
   background: rgba(255, 255, 255, 0.6);
   /* padding: 50px 30px; */
+}
+
+.opaque-nav > .nav-bar {
+  background-color: white;
+  transition: background 1s;
 }
 
 #hamburger {
@@ -269,6 +276,7 @@ div.skill-name {
   color: #406E8E;
   font-weight: 400;
   text-align: center;
+  text-transform: lowercase;
 }
 
 .tabgroup {
