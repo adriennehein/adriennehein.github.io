@@ -65,3 +65,7 @@ function fixNav() {
 };
 
 window.addEventListener('scroll', fixNav);
+
+// date in footer
+const year = new Date;
+document.querySelector('.date').textContent = year.getFullYear();
